@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="eBay年末商戦セミナー報告">
+<meta property="og:description" content="2026年9月16日 eBay公式セミナー（大阪）の要点まとめ">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>eBay年末商戦セミナー報告</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ground:#EEF0F3; --sheet:#FFFFFF; --ink:#0F1419; --sub:#4A5462; --muted:#7A8492;
+    --line:#D5DAE1; --soft:#F5F7F9;
+    --red:#C8102E; --red-bg:#FBEAEC; --navy:#12305A; --navy-bg:#E7EDF5;
+    --amber:#8A5A00; --amber-bg:#FFF3D6; --bar:#12305A;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ground:#0B0E12; --sheet:#141920; --ink:#E8ECF1; --sub:#B2BAC5; --muted:#8490A0;
+      --line:#2A323D; --soft:#1A2029;
+      --red:#FF5A6E; --red-bg:#2E151A; --navy:#8DB4F0; --navy-bg:#16233A;
+      --amber:#F2C267; --amber-bg:#2B2210; --bar:#8DB4F0;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0B0E12; --sheet:#141920; --ink:#E8ECF1; --sub:#B2BAC5; --muted:#8490A0;
+    --line:#2A323D; --soft:#1A2029;
+    --red:#FF5A6E; --red-bg:#2E151A; --navy:#8DB4F0; --navy-bg:#16233A;
+    --amber:#F2C267; --amber-bg:#2B2210; --bar:#8DB4F0;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--ground); color:var(--ink);
+    font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",system-ui,sans-serif;
+    font-size:15px; line-height:1.8;
+  }
+  .num{font-family:"Barlow Condensed","Zen Kaku Gothic New",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}
+  .page{max-width:58rem;margin:0 auto;padding-inline:16px;padding-block:0 4rem}
+
+  /* ---------- nav ---------- */
+  .nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--ground);border-bottom:1px solid var(--line);margin-inline:-16px;padding:.5rem 16px}
+  .nav ol{list-style:none;margin:0;padding:0;display:flex;gap:.4rem;overflow-x:auto;scrollbar-width:none}
+  .nav ol::-webkit-scrollbar{display:none}
+  .nav a{display:block;white-space:nowrap;text-decoration:none;color:var(--sub);font-size:.78rem;font-weight:700;padding:.3rem .7rem;border:1px solid var(--line);border-radius:999px;background:var(--sheet)}
+  .nav a:hover,.nav a:focus-visible{color:var(--ink);border-color:var(--ink);outline:none}
+  .nav a b{font-family:"Barlow Condensed",sans-serif;color:var(--red);margin-right:.3rem}
+
+  /* ---------- cover ---------- */
+  .cover{padding-block:2.25rem 1.5rem}
+  .eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.14em;color:var(--muted);margin:0 0 .6rem}
+  h1{font-size:clamp(1.7rem,6vw,2.6rem);font-weight:900;line-height:1.25;margin:0;text-wrap:balance;letter-spacing:-.01em}
+  h1 em{font-style:normal;color:var(--red)}
+  .meta{margin:.9rem 0 0;color:var(--sub);font-size:.84rem;line-height:1.75}
+  .meta span{color:var(--muted)}
+
+  .top{display:grid;grid-template-columns:1fr;gap:12px;margin-top:1.5rem}
+  @media (min-width:760px){.top{grid-template-columns:15rem 1fr}}
+  .count{background:var(--ink);color:var(--sheet);padding:1.1rem 1.25rem;display:flex;flex-direction:column;justify-content:space-between;gap:.5rem}
+  .count small{font-size:.74rem;letter-spacing:.1em;opacity:.75;font-weight:700}
+  .count b{font-size:3.6rem;line-height:1;font-weight:700}
+  .count b i{font-style:normal;font-size:1.2rem;margin-left:.25rem;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700}
+  .count p{margin:0;font-size:.8rem;opacity:.8;line-height:1.6}
+
+  .conc{background:var(--sheet);border:1px solid var(--line);padding:1.1rem 1.25rem}
+  .conc h2{all:unset;display:block;font-size:.72rem;font-weight:700;letter-spacing:.14em;color:var(--red);margin-bottom:.5rem}
+  .conc ol{margin:0;padding:0;list-style:none;display:grid;gap:.6rem}
+  .conc li{display:grid;grid-template-columns:1.6rem 1fr;gap:.5rem;align-items:baseline;font-size:.95rem;font-weight:700;line-height:1.6}
+  .conc li .num{font-size:1.25rem;color:var(--red);font-weight:700}
+  .conc li span.d{display:block;font-weight:400;font-size:.8rem;color:var(--sub)}
+
+  .caution{margin-top:12px;background:var(--amber-bg);color:var(--amber);font-size:.8rem;line-height:1.7;padding:.7rem 1rem}
+
+  /* ---------- sections ---------- */
+  section.sh{background:var(--sheet);border:1px solid var(--line);margin-top:16px;padding:1.5rem 1.25rem 1.25rem;scroll-margin-top:calc(env(safe-area-inset-top,0px) + 3.5rem)}
+  @media (min-width:760px){section.sh{padding:2rem 2rem 1.5rem}}
+  .sh-head{display:grid;grid-template-columns:auto 1fr;gap:.25rem 1rem;align-items:start;padding-bottom:1rem;border-bottom:2px solid var(--ink);margin-bottom:1.25rem}
+  .sh-no{grid-row:span 2;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:2.4rem;line-height:.95;color:var(--red)}
+  .sh-cat{font-size:.72rem;font-weight:700;letter-spacing:.14em;color:var(--muted)}
+  .sh-head h2{margin:0;font-size:clamp(1.15rem,4.2vw,1.45rem);font-weight:900;line-height:1.45;text-wrap:balance}
+  h3{font-size:.95rem;font-weight:900;margin:1.5rem 0 .6rem;display:flex;align-items:center;gap:.5rem}
+  h3::before{content:"";width:.5rem;height:.5rem;background:var(--navy);flex:none}
+  h3:first-child{margin-top:0}
+  p{margin:0 0 .9rem;max-width:42rem}
+  .lead{color:var(--sub)}
+  ul.plain{margin:0 0 .9rem;padding-left:1.1rem}
+  ul.plain li{margin-bottom:.3rem}
+  .tag{display:inline-block;font-size:.68rem;font-weight:700;padding:.05rem .45rem;border-radius:2px;vertical-align:.12em;margin-left:.3rem;white-space:nowrap}
+  .tag.up{background:var(--red-bg);color:var(--red)}
+  .tag.down{background:var(--navy-bg);color:var(--navy)}
+  .tag.warn{background:var(--amber-bg);color:var(--amber)}
+
+  .point{display:grid;grid-template-columns:auto 1fr;gap:.75rem;align-items:start;background:var(--red-bg);padding:.8rem 1rem;margin:1rem 0 0}
+  .point b{font-size:.7rem;letter-spacing:.12em;color:var(--red);padding-top:.2rem;white-space:nowrap}
+  .point p{margin:0;font-weight:700;font-size:.9rem;line-height:1.7}
+
+  .grid2{display:grid;grid-template-columns:1fr;gap:1.25rem 2rem}
+  @media (min-width:760px){.grid2{grid-template-columns:1fr 1fr}}
+
+  /* KPI */
+  .kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:1.25rem}
+  @media (min-width:760px){.kpis{grid-template-columns:repeat(4,1fr)}}
+  .kpi{background:var(--sheet);padding:.9rem 1rem}
+  .kpi b{display:block;font-size:2.4rem;line-height:1;font-weight:700;color:var(--navy)}
+  .kpi b i{font-style:normal;font-size:1rem;font-family:"Zen Kaku Gothic New",sans-serif;margin-left:.1rem}
+  .kpi span{display:block;font-size:.76rem;color:var(--sub);line-height:1.55;margin-top:.45rem}
+
+  /* rank table */
+  .rank{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+  .rank li{display:grid;grid-template-columns:2rem 1fr;gap:.5rem;padding:.4rem 0;border-bottom:1px solid var(--line);font-size:.88rem;line-height:1.5;align-items:baseline}
+  .rank li .num{font-weight:700;color:var(--muted);font-size:1.05rem}
+  .rank li.hl{background:var(--navy-bg);margin-inline:-.5rem;padding-inline:.5rem;grid-template-columns:2rem 1fr}
+  .rank li.hl .num{color:var(--navy)}
+  .rank li.top3 .num{color:var(--red)}
+  .src{font-size:.74rem;color:var(--muted);margin:.5rem 0 0}
+
+  .chips{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 .9rem;padding:0;list-style:none}
+  .chips li{font-size:.82rem;border:1px solid var(--line);padding:.15rem .6rem;background:var(--soft)}
+  .chips li .num{color:var(--red);font-weight:700;margin-right:.3rem}
+
+  /* calendar */
+  .year{display:grid;grid-template-columns:repeat(12,1fr);gap:2px;margin:.25rem 0 .4rem}
+  .year div{height:2.2rem;background:var(--soft);position:relative}
+  .year div.p1{background:var(--navy-bg)}
+  .year div.p2{background:var(--red)}
+  .months{display:grid;grid-template-columns:repeat(12,1fr);gap:2px;font-size:.68rem;color:var(--muted);text-align:center;margin-bottom:1rem}
+  .peaks{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--line)}
+  @media (min-width:640px){.peaks{grid-template-columns:repeat(4,1fr);border-top:0;gap:1px;background:var(--line);border:1px solid var(--line)}}
+  .peak{background:var(--sheet);padding:.6rem .8rem;border-bottom:1px solid var(--line)}
+  @media (min-width:640px){.peak{border-bottom:0}}
+  .peak b{display:block;font-size:.95rem}
+  .peak span{font-size:.8rem;color:var(--sub);line-height:1.55;display:block}
+  .peak.max{background:var(--red-bg)}
+  .peak.max b{color:var(--red)}
+
+  .bf{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0 0 .5rem}
+  .bf div{border:1px solid var(--line);padding:.6rem .7rem;text-align:left}
+  .bf div.main{border:2px solid var(--red)}
+  .bf b{display:block;font-size:1.8rem;line-height:1;font-weight:700}
+  .bf .main b{color:var(--red)}
+  .bf span{font-size:.74rem;color:var(--sub);display:block;margin-top:.3rem;line-height:1.4}
+
+  /* 3 viewpoints */
+  .three{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:1rem}
+  @media (min-width:700px){.three{grid-template-columns:repeat(3,1fr)}}
+  .three div{border:1px solid var(--line);border-top:4px solid var(--navy);padding:.8rem 1rem}
+  .three div:nth-child(3){border-top-color:var(--red)}
+  .three b{display:block;font-size:1.05rem;font-weight:900}
+  .three small{display:block;color:var(--muted);font-size:.7rem;letter-spacing:.1em;font-weight:700}
+  .three span{display:block;font-size:.82rem;color:var(--sub);line-height:1.65;margin-top:.35rem}
+
+  .vs{display:grid;grid-template-columns:1fr;gap:10px}
+  @media (min-width:700px){.vs{grid-template-columns:1fr 1fr}}
+  .vs > div{padding:.9rem 1rem;background:var(--soft)}
+  .vs h4{margin:0 0 .4rem;font-size:.85rem}
+  .vs .ng h4{color:var(--muted)}
+  .vs .ok{background:var(--navy-bg)}
+  .vs .ok h4{color:var(--navy)}
+  .vs ul{margin:0;padding-left:1.05rem;font-size:.84rem;line-height:1.7}
+  .vs li{margin-bottom:.25rem}
+
+  /* steps */
+  ol.steps{list-style:none;margin:0 0 1rem;padding:0;counter-reset:s;display:grid;gap:0;border-left:2px solid var(--line);margin-left:.75rem}
+  ol.steps li{counter-increment:s;position:relative;padding:.1rem 0 .8rem 1.5rem;font-size:.9rem;line-height:1.65}
+  ol.steps li::before{content:counter(s);position:absolute;left:-.85rem;top:.1rem;width:1.6rem;height:1.6rem;border-radius:50%;background:var(--navy);color:var(--sheet);font:700 .9rem/1.6rem "Barlow Condensed",sans-serif;text-align:center}
+  .setting{display:flex;flex-wrap:wrap;gap:.35rem;margin:.25rem 0 1rem;padding:0;list-style:none}
+  .setting li{font-family:ui-monospace,"SFMono-Regular",Consolas,monospace;font-size:.76rem;background:var(--ink);color:var(--sheet);padding:.15rem .5rem}
+
+  /* tariff chart */
+  .duty{display:grid;gap:.9rem;margin:.5rem 0 .75rem}
+  .drow{display:grid;grid-template-columns:1fr;gap:.3rem}
+  .dlabel{font-size:.84rem;font-weight:700;line-height:1.45}
+  .dlabel span{font-weight:400;color:var(--muted);font-size:.76rem;margin-left:.3rem}
+  .dtrack{display:grid;grid-template-columns:1fr 3.8rem;align-items:center;gap:.6rem}
+  .dbar{height:1.1rem;background:var(--soft);position:relative}
+  .dbar i{position:absolute;inset:0 auto 0 0;background:var(--bar)}
+  .drow.hot .dbar i{background:var(--red)}
+  .dval{font-size:1.4rem;font-weight:700;text-align:right;line-height:1}
+  .drow.hot .dval{color:var(--red)}
+  .dsub{font-size:.74rem;color:var(--muted);font-family:ui-monospace,Consolas,monospace}
+  .axis{display:grid;grid-template-columns:1fr 3.8rem;gap:.6rem;font-size:.68rem;color:var(--muted)}
+  .axis div{display:flex;justify-content:space-between}
+
+  .rules{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+  @media (min-width:700px){.rules{grid-template-columns:1fr 1fr}}
+  .rules div{background:var(--sheet);padding:.75rem 1rem}
+  .rules b{display:block;font-size:.9rem}
+  .rules span{display:block;font-size:.8rem;color:var(--sub);line-height:1.6}
+  .rules em{font-style:normal;display:block;font-size:.78rem;color:var(--navy);margin-top:.25rem;font-weight:700}
+
+  .qa{border:1px solid var(--line);margin-top:.5rem}
+  .qa > div{display:grid;grid-template-columns:2.2rem 1fr;gap:.5rem;padding:.8rem 1rem}
+  .qa > div + div{border-top:1px solid var(--line);background:var(--soft)}
+  .qa .num{font-size:1.5rem;font-weight:700;line-height:1.1}
+  .qa .q .num{color:var(--red)}
+  .qa .a .num{color:var(--navy)}
+  .qa p{margin:0 0 .5rem;font-size:.88rem}
+  .qa p:last-child{margin:0}
+
+  /* action */
+  .act{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+  .act li{border-bottom:1px solid var(--line)}
+  .act label{display:grid;grid-template-columns:1.4rem 1fr auto;gap:.75rem;align-items:start;padding:.75rem .25rem;cursor:pointer}
+  .act input{appearance:none;width:1.25rem;height:1.25rem;border:2px solid var(--ink);margin:.2rem 0 0;display:grid;place-content:center;background:var(--sheet);cursor:pointer}
+  .act input:checked{background:var(--red);border-color:var(--red)}
+  .act input:checked::after{content:"";width:.35rem;height:.65rem;border:solid var(--sheet);border-width:0 2px 2px 0;transform:rotate(45deg) translate(-1px,-1px)}
+  .act input:focus-visible{outline:2px solid var(--navy);outline-offset:2px}
+  .act .t{font-weight:700;font-size:.92rem;line-height:1.6}
+  .act .t span{display:block;font-weight:400;font-size:.78rem;color:var(--muted)}
+  .act input:checked + .t{color:var(--muted);text-decoration:line-through}
+  .act .area{font-size:.68rem;font-weight:700;color:var(--navy);background:var(--navy-bg);padding:.1rem .45rem;white-space:nowrap;margin-top:.2rem}
+  .progress{display:flex;align-items:center;gap:.75rem;margin:0 0 .75rem;font-size:.8rem;color:var(--sub)}
+  .progress .pb{flex:1;height:6px;background:var(--soft);position:relative}
+  .progress .pb i{position:absolute;inset:0 auto 0 0;background:var(--red);width:0;transition:width .25s}
+  @media (prefers-reduced-motion:reduce){.progress .pb i{transition:none}}
+
+  footer{margin-top:1.5rem;font-size:.76rem;color:var(--muted);line-height:1.8}
+  footer p{max-width:none;margin:0 0 .4rem}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <header class="cover">
+    <p class="eyebrow">セミナー報告 ｜ 欠席メンバー向け共有</p>
+    <h1>年末商戦は<em>11月27日</em>が本番。<br>勝負は「今からの仕込み」で決まる。</h1>
+    <p class="meta">eBay公式セミナー 2026年9月16日（水）14:30〜16:30・大阪<br><span>講師：荒井智代さん（PlusBonBuono／eBay公認パートナー・セラー歴12年）／SpeedPAK案内：神薗さん</span></p>
+
+    <div class="top">
+      <div class="count">
+        <small>BLACK FRIDAY まで</small>
+        <b class="num" id="days">—</b>
+        <p id="daysNote">2026年11月27日（金）</p>
+      </div>
+      <div class="conc">
+        <h2>結論 ― この3点だけ持ち帰ればOK</h2>
+        <ol>
+          <li><span class="num">1</span><div>11〜12月が年間最大の山。出品数・配送・アカウント状態を今のうちに整える<span class="d">感謝祭11/26 → BF 11/27 → サイバーマンデー11/30</span></div></li>
+          <li><span class="num">2</span><div>商品は「売れている × 扱える × 選別済み」の3条件が重なるものを選ぶ<span class="d">「売れてるから参入」は検品甘さ・赤字仕入れの元</span></div></li>
+          <li><span class="num">3</span><div>関税は原産国ではなく「分類」で決まる。売る前にZonosで合計税率を出す<span class="d">同じ中国製キーホルダーで 12.5% と 78.9% の差</span></div></li>
+        </ol>
+      </div>
+    </div>
+    <p class="caution">数値は会場スライドの記載どおり（音声と食い違う箇所はスライドを優先）。SpeedPAKの割引条件だけは録音からの復元なので <span class="tag warn">要確認</span> を付けています。</p>
+  </header>
+
+  <nav class="nav" aria-label="目次">
+    <ol>
+      <li><a href="#s1"><b>01</b>市場データ</a></li>
+      <li><a href="#s2"><b>02</b>カレンダー</a></li>
+      <li><a href="#s3"><b>03</b>商品選び</a></li>
+      <li><a href="#s4"><b>04</b>リサーチ手順</a></li>
+      <li><a href="#s5"><b>05</b>規制・関税</a></li>
+      <li><a href="#s6"><b>06</b>配送</a></li>
+      <li><a href="#s7"><b>07</b>アクション</a></li>
+    </ol>
+  </nav>
+
+  <!-- 01 -->
+  <section class="sh" id="s1">
+    <div class="sh-head">
+      <span class="sh-no">01</span>
+      <span class="sh-cat">市場データ</span>
+      <h2>「Used in Japan」は伸びている。日本セラーの売上の7割超が中古品</h2>
+    </div>
+
+    <div class="kpis">
+      <div class="kpi"><b class="num">91<i>兆円</i></b><span>家庭に眠る「かくれ資産」総額（1人平均 約71万円）</span></div>
+      <div class="kpi"><b class="num">73<i>%</i></b><span>日本セラーの非新品の販売割合（2025年）</span></div>
+      <div class="kpi"><b class="num">19<i>%</i></b><span>非新品を売る日本セラー数の年平均成長率（2023→2025）</span></div>
+      <div class="kpi"><b class="num">211</b><span>中古品が輸出された国・地域数（2025年）</span></div>
+    </div>
+
+    <div class="grid2">
+      <div>
+        <h3>日本発 取引額ランキング（2026年Q2）</h3>
+        <ol class="rank">
+          <li class="top3"><span class="num">1</span><span>レディース アパレル＆バッグ ブランド小物</span></li>
+          <li class="top3"><span class="num">2</span><span>時計・パーツ＆アクセサリー</span></li>
+          <li class="top3"><span class="num">3</span><span>トレーディングカード</span></li>
+          <li><span class="num">4</span><span>アニメアート＆キャラクターグッズ</span></li>
+          <li class="hl"><span class="num">5</span><span>カメラレンズ＆フィルター</span></li>
+          <li><span class="num">6</span><span>自動車パーツ</span></li>
+          <li class="hl"><span class="num">7</span><span>フィルムカメラ<span class="tag up">1UP</span></span></li>
+          <li class="hl"><span class="num">8</span><span>デジタルカメラ<span class="tag down">1DOWN</span></span></li>
+          <li><span class="num">9</span><span>メンズ アパレル＆バッグ ブランド小物</span></li>
+          <li><span class="num">10</span><span>ビデオゲーム（本体）</span></li>
+        </ol>
+        <p class="src">日本からの越境EC取引データ（2026年4〜6月）。網掛けはカメラ関連。</p>
+      </div>
+      <div>
+        <h3>成長率 TOP3</h3>
+        <ul class="chips">
+          <li><span class="num">1</span>トレーディングカード</li>
+          <li><span class="num">2</span>時計・パーツ＆アクセサリー</li>
+          <li><span class="num">3</span>アニメ＆キャラクターグッズ</li>
+        </ul>
+        <h3>Used in Japan 売れ筋 TOP5</h3>
+        <ul class="chips">
+          <li><span class="num">1</span>アパレル・ファッション小物</li>
+          <li><span class="num">2</span>写真・カメラ関連</li>
+          <li><span class="num">3</span>ジュエリー・貴金属・時計</li>
+          <li><span class="num">4</span>おもちゃ・ホビー</li>
+          <li><span class="num">5</span>コレクターズアイテム</li>
+        </ul>
+        <h3>人気の輸出先 TOP5</h3>
+        <ul class="chips">
+          <li><span class="num">1</span>アメリカ</li>
+          <li><span class="num">2</span>イギリス</li>
+          <li><span class="num">3</span>オーストラリア</li>
+          <li><span class="num">4</span>カナダ</li>
+          <li><span class="num">5</span>ドイツ</li>
+        </ul>
+      </div>
+    </div>
+    <div class="point"><b>示唆</b><p>カメラ関連はTop10に3カテゴリー。フィルムカメラが順位を上げ、デジタルカメラと入れ替わった。</p></div>
+  </section>
+
+  <!-- 02 -->
+  <section class="sh" id="s2">
+    <div class="sh-head">
+      <span class="sh-no">02</span>
+      <span class="sh-cat">年間カレンダー</span>
+      <h2>一年の山は4つ。最大は11〜12月の年末商戦</h2>
+    </div>
+
+    <div class="year" aria-hidden="true">
+      <div></div><div class="p1"></div><div class="p1"></div><div></div><div class="p1"></div><div class="p1"></div><div></div><div class="p1"></div><div class="p1"></div><div></div><div class="p2"></div><div class="p2"></div>
+    </div>
+    <div class="months num" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span></div>
+
+    <div class="peaks">
+      <div class="peak"><b>2〜3月</b><span>Tax Return。税還付で購買意欲アップ</span></div>
+      <div class="peak"><b>5〜6月</b><span>母の日・父の日のギフト需要</span></div>
+      <div class="peak"><b>8〜9月</b><span>新学期。学校関連の需要</span></div>
+      <div class="peak max"><b>11〜12月</b><span>BF／サイバーマンデー／クリスマス</span></div>
+    </div>
+
+    <div class="grid2" style="margin-top:1.5rem">
+      <div>
+        <h3>2026年の本番日程</h3>
+        <div class="bf">
+          <div><b class="num">11/26</b><span>感謝祭（第4木曜）</span></div>
+          <div class="main"><b class="num">11/27</b><span>ブラックフライデー</span></div>
+          <div><b class="num">11/30</b><span>サイバーマンデー</span></div>
+        </div>
+        <h3>推奨される事前準備</h3>
+        <ul class="plain">
+          <li>夏頃から出品数を増やしておく</li>
+          <li>配送オペレーションの見直し</li>
+          <li>アカウントレベルを良い状態に保つ</li>
+        </ul>
+      </div>
+      <div>
+        <h3>この時期に売れやすいカテゴリー</h3>
+        <div class="rules" style="grid-template-columns:1fr">
+          <div><b>ガジェット・家電製品</b></div>
+          <div><b>アパレル・ファブリック</b><span>暖かい衣類、スリッパ、ブランケット、ひざ掛け</span></div>
+          <div><b>ホビー・シーズン装飾</b><span>おもちゃ、ゲーム、ストリングライト、クリスマスツリー</span></div>
+          <div><b>ホーム・ビューティー</b><span>キッチン用品、小型キッチン家電、美容関連製品</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 -->
+  <section class="sh" id="s3">
+    <div class="sh-head">
+      <span class="sh-no">03</span>
+      <span class="sh-cat">商品選びのフレーム</span>
+      <h2>「何が売れるか」ではなく「自分が売るべきものは何か」で選ぶ</h2>
+    </div>
+    <p class="lead">売れるという理由だけで選ぶと、仕入れ・商品説明・発送で想定外の壁にぶつかる。次の3条件が重なる商品を探す。</p>
+
+    <div class="three">
+      <div><small>視点 ①</small><b>売れている</b><span>eBayで実際に売れた実績がある（→ 04 リサーチ手順）</span></div>
+      <div><small>視点 ②</small><b>扱える</b><span>最低限の商品知識がある／仕入れられる／質問に答えられる</span></div>
+      <div><small>視点 ③</small><b>選別する</b><span>CPSC・関税率のブレなど、販売後に困るリスクが低い（→ 05 規制・関税）</span></div>
+    </div>
+
+    <h3>② 「扱える」を先に考える理由</h3>
+    <div class="vs">
+      <div class="ng">
+        <h4>「カメラ／ポケカが売れてるから」で安易に参入すると</h4>
+        <ul>
+          <li>楽しくない → モチベーションが続かない</li>
+          <li>検品・説明が甘い → クレーム、アカウントへの悪影響</li>
+          <li>相場感・仕入れ先がない → 利益が出る価格で仕入れられず赤字</li>
+        </ul>
+      </div>
+      <div class="ok">
+        <h4>興味と知識がある商品なら</h4>
+        <ul>
+          <li>情報収集も作業も続けられる</li>
+          <li>確実な検品と丁寧な説明でアカウントの健全性を保てる</li>
+          <li>適正な利益計算ができる</li>
+        </ul>
+      </div>
+    </div>
+    <div class="point"><b>結論</b><p>自分の強みを最大限に活かせるジャンルから始める。</p></div>
+  </section>
+
+  <!-- 04 -->
+  <section class="sh" id="s4">
+    <div class="sh-head">
+      <span class="sh-no">04</span>
+      <span class="sh-cat">① 売れている商品を探す</span>
+      <h2>セラーハブの Product Research で「日本から売れた実績」を見る</h2>
+    </div>
+
+    <div class="grid2">
+      <div>
+        <h3>検索の手順</h3>
+        <ol class="steps">
+          <li>キーワードを入れる（商品名・ブランド・メーカー・カテゴリー）</li>
+          <li>コンディションを絞る（新品／中古）</li>
+          <li>販売形態を絞る（オークション／即決）</li>
+          <li>価格帯を指定する</li>
+          <li>セラーの国を <b>Japan</b> にする</li>
+          <li>期間は直近30日・90日。または<b>昨年の年末商戦</b>を見る</li>
+        </ol>
+      </div>
+      <div>
+        <h3>会場での実演設定</h3>
+        <ul class="setting">
+          <li>silver necklace</li><li>Used</li><li>Best Offer accepted</li><li>Fixed price</li><li>$100–$500</li><li>Seller Country: Japan</li><li>Last 30 days</li>
+        </ul>
+        <h3>その後にやること</h3>
+        <ul class="plain">
+          <li>売れた価格帯をつかむ</li>
+          <li>出品中の相場も確認する</li>
+          <li>手数料と送料を引いても赤字にならない仕入れ値を決める</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 -->
+  <section class="sh" id="s5">
+    <div class="sh-head">
+      <span class="sh-no">05</span>
+      <span class="sh-cat">③ 選別する</span>
+      <h2>「売れるか？」の前に「普通に送れるか・関税で赤字にならないか」</h2>
+    </div>
+
+    <h3>ルール1：米国CPSC（安全基準・証明書）</h3>
+    <div class="rules">
+      <div><b>子ども向け商品</b><span>12歳以下向けが対象</span><em>→ 対象年齢13歳以上など、大人向けと明確な商品を選ぶ</em></div>
+      <div><b>一部のアパレル</b><span>素材・用途・規制対象の確認が必要</span><em>→ 中古品、ウールなど扱いやすい素材を選ぶ</em></div>
+      <div><b>一部のボタン電池製品</b><span>製造年月日や電池種類の確認が必要</span><em>→ ボタン／コイン電池不要の商品を選ぶ・事前確認</em></div>
+      <div><b>注記</b><span>最初からCPSCの影響を受けにくい商品を選ぶのも戦略。ただしこれに沿えば対象外になる、という意味ではない。</span></div>
+    </div>
+
+    <h3>ルール2：関税率のブレ</h3>
+    <p>似た商品でも関税率は同じとは限らない。変わる要因は <b>素材</b>（合成繊維・天然革・金属）、<b>用途</b>（家庭用・工業用・スポーツ用）、<b>原産国</b>（EPA/FTA適用可否）、<b>HSコード／税関の判断</b> の4つ。特に<b>金属を含む商品</b>は想定より高い関税になりやすい。</p>
+
+    <p class="src" style="margin:0 0 .4rem">実例：Zonos Prepay での合計関税率（スライド記載値）</p>
+    <div class="duty">
+      <div class="drow">
+        <div class="dlabel">キーホルダー（中国製）<span>Plastic miniature bag Charm</span></div>
+        <div class="dtrack"><div class="dbar"><i style="width:15.625%"></i></div><b class="dval num">12.5%</b></div>
+        <div class="dsub">HTS 7117.90.7500 ／ 関税 0% ＋ 301条 12.5%</div>
+      </div>
+      <div class="drow hot">
+        <div class="dlabel">キーホルダー（中国製）<span>Plastic tumbler keychain ― 鉄鋼製品扱い</span></div>
+        <div class="dtrack"><div class="dbar"><i style="width:98.625%"></i></div><b class="dval num">78.9%</b></div>
+        <div class="dsub">HTS 7326.20.0090 ／ 関税 3.9% ＋ 232条 50% ＋ 301条 25%</div>
+      </div>
+      <div class="drow">
+        <div class="dlabel">ハンドバッグ<span>牛革／フランス製</span></div>
+        <div class="dtrack"><div class="dbar"><i style="width:12.5%"></i></div><b class="dval num">10%</b></div>
+        <div class="dsub">HTS 4202.21.9000 ／ 関税 9% ＋ 301条 10%</div>
+      </div>
+      <div class="drow">
+        <div class="dlabel">ハンドバッグ<span>PVCコーティングキャンバス／ベトナム製</span></div>
+        <div class="dtrack"><div class="dbar"><i style="width:37.625%"></i></div><b class="dval num">30.1%</b></div>
+        <div class="dsub">HTS 4202.22.8980 ／ 関税 17.6% ＋ 301条 12.5%</div>
+      </div>
+      <div class="axis" aria-hidden="true"><div class="num"><span>0%</span><span>20%</span><span>40%</span><span>60%</span><span>80%</span></div><span></span></div>
+    </div>
+    <div class="point"><b>要点</b><p>同じ「中国製キーホルダー」でも、樹脂の装飾品なら12.5%、金属部分で鉄鋼製品と判断されれば78.9%。売る前にZonosで素材・用途・原産国ごとに算出・比較する。</p></div>
+
+    <h3>その他のルール</h3>
+    <div class="rules">
+      <div><b>米国FDA</b><span>食品・化粧品・医薬品・医療機器など。商品により販売可否・表示・法規制が異なる</span></div>
+      <div><b>ワシントン条約</b><span>エキゾチックレザー、動植物由来素材。素材ごとに許可・証明が必要</span></div>
+      <div><b>植物・種・木材</b><span>検疫・輸入許可・証明書が必要な場合あり。必ず事前確認</span></div>
+      <div><b>危険物</b><span>リチウム電池、香水、スプレー、アルコール類。配送会社の引き受け条件に注意</span></div>
+    </div>
+    <div class="point"><b>結論</b><p>初心者のうちは、わざわざ難しい商品を選ばないのも立派な戦略。</p></div>
+  </section>
+
+  <!-- 06 -->
+  <section class="sh" id="s6">
+    <div class="sh-head">
+      <span class="sh-no">06</span>
+      <span class="sh-cat">配送</span>
+      <h2>繁忙期前に配送設定を点検。「反映ボタンの押し忘れ」が落とし穴</h2>
+    </div>
+
+    <div class="grid2">
+      <div>
+        <h3>配送設定の見直しポイント</h3>
+        <ul class="plain">
+          <li>返送先住所の設定が改善され、変更が反映されやすくなった</li>
+          <li>各サイトの送料は一覧画面で確認できる。配送ポリシーが正しく反映されているか点検</li>
+          <li><b>eBay.com側の変更は自動反映されない</b>。反映ボタンを押す</li>
+          <li><b>ハンドリングタイム変更時も</b>プロファイルの反映操作が必要</li>
+        </ul>
+      </div>
+      <div>
+        <h3>SpeedPAK（eBay公式配送／Orange Connex運営）</h3>
+        <ul class="plain">
+          <li>eBayと同期し、届け先住所がそのまま反映（入力の手間とミスが減る）</li>
+          <li>出荷から配送状況まで一元管理・可視化</li>
+          <li>最寄りの郵便局から差し出せる。物量が少なくても使える</li>
+          <li>国内で追跡番号が付き、繁忙期の遅延影響を抑えやすい</li>
+          <li>割引の案内あり（25%オフ・5,000円といった数字）<span class="tag warn">要確認</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Q&amp;A：送料が後から変わるのはなぜ？</h3>
+    <div class="qa">
+      <div class="q"><span class="num">Q</span><div><p>見積もりと実際の請求額が違う。どの時点で確定するのか。</p></div></div>
+      <div class="a"><span class="num">A</span><div>
+        <p>出品画面の送料はあくまで見積もり。運送会社の倉庫で<b>カメラによる自動計測</b>をしたサイズ・重量で確定するため、実寸と食い違うことがある。</p>
+        <p>身に覚えのない請求（本なのに12kgと計測、など）は Orange Connex のカスタマーサポートへ。<b>実サイズ・重量が分かる写真</b>を添えると返金対応が進みやすい。</p>
+      </div></div>
+    </div>
+  </section>
+
+  <!-- 07 -->
+  <section class="sh" id="s7">
+    <div class="sh-head">
+      <span class="sh-no">07</span>
+      <span class="sh-cat">アクションリスト</span>
+      <h2>BFまでにやること 6項目</h2>
+    </div>
+    <div class="progress"><span id="prog" class="num">0 / 6</span><div class="pb"><i id="progBar"></i></div></div>
+    <ul class="act" id="act">
+      <li><label><input type="checkbox" id="a1"><span class="t">配送ポリシーと返送先住所を点検し、反映ボタンを押す</span><span class="area">配送</span></label></li>
+      <li><label><input type="checkbox" id="a2"><span class="t">ハンドリングタイムを繁忙期向けに見直す<span>変更したらプロファイルの反映も忘れずに</span></span><span class="area">配送</span></label></li>
+      <li><label><input type="checkbox" id="a3"><span class="t">アカウントレベルの状態を確認しておく</span><span class="area">アカウント</span></label></li>
+      <li><label><input type="checkbox" id="a4"><span class="t">扱う商材のHTSコードと合計関税率を Zonos で算出する<span>金属を含む商品は特に</span></span><span class="area">関税</span></label></li>
+      <li><label><input type="checkbox" id="a5"><span class="t">昨年の年末商戦に売れた商品を Product Research で振り返る<span>Seller Country: Japan で絞る</span></span><span class="area">リサーチ</span></label></li>
+      <li><label><input type="checkbox" id="a6"><span class="t">11月に向けて出品数を積んでおく</span><span class="area">出品</span></label></li>
+    </ul>
+    <p class="src">チェック状態はこの端末のブラウザにだけ保存されます。</p>
+  </section>
+
+  <footer>
+    <p>出典：2026年9月16日 eBay公式セミナー（大阪）。会場で撮影したスライドと録音をもとに再構成。録音および内容の共有は主催者の許可済み。</p>
+    <p>未収録：プロモーション（クーポン・ニュースレター・ボリュームディスカウント）とAI活用のパートは、聞き取りが断片的だったため今回は載せていません。</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var target = new Date(2026, 10, 27);
+  var now = new Date();
+  var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  var diff = Math.round((target - today) / 86400000);
+  var el = document.getElementById('days');
+  var note = document.getElementById('daysNote');
+  if (diff > 0) { el.innerHTML = diff + '<i>日</i>'; }
+  else if (diff === 0) { el.textContent = '本日'; }
+  else { el.textContent = '終了'; note.textContent = '2026年のブラックフライデーは終了しました'; }
+
+  var KEY = 'ebay-q4-actions';
+  var boxes = document.querySelectorAll('#act input');
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) {}
+  function update(){
+    var n = 0, state = {};
+    boxes.forEach(function(b){ if (b.checked) n++; state[b.id] = b.checked; });
+    document.getElementById('prog').textContent = n + ' / ' + boxes.length;
+    document.getElementById('progBar').style.width = (n / boxes.length * 100) + '%';
+    try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+  }
+  boxes.forEach(function(b){ b.checked = !!saved[b.id]; b.addEventListener('change', update); });
+  update();
+})();
+</script>
+</body>
+</html>
