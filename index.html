@@ -124,16 +124,25 @@
   .chips li .num{color:var(--red);font-weight:700;margin-right:.3rem}
 
   /* calendar */
-  .year{display:grid;grid-template-columns:repeat(12,1fr);gap:2px;margin:.25rem 0 .4rem}
-  .year div{height:2.2rem;background:var(--soft);position:relative}
-  .year div.p1{background:var(--navy-bg)}
-  .year div.p2{background:var(--red)}
-  .months{display:grid;grid-template-columns:repeat(12,1fr);gap:2px;font-size:.68rem;color:var(--muted);text-align:center;margin-bottom:1rem}
+  .year{display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:2.6rem;gap:3px;margin:.25rem 0 .35rem}
+  .year > i{grid-row:1;background:repeating-linear-gradient(135deg,var(--soft) 0 4px,transparent 4px 8px);border:1px solid var(--line)}
+  .year > b{grid-row:1;display:flex;align-items:center;justify-content:center;text-align:center;background:var(--navy);color:var(--sheet);font-size:.72rem;font-weight:700;line-height:1.2;padding:0 .2rem;z-index:1}
+  .year > b.max{background:var(--red);font-size:.8rem;font-weight:900}
+  .months{display:grid;grid-template-columns:repeat(12,1fr);gap:3px;font-size:.72rem;color:var(--muted);text-align:center;margin-bottom:.6rem}
+  .months span.now{color:var(--ink);font-weight:700;position:relative}
+  .months span.now::after{content:"今";display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-size:.62rem;background:var(--ink);color:var(--sheet);width:1.3rem;margin:.1rem auto 0;line-height:1.3rem;border-radius:50%}
+  .legend{display:flex;flex-wrap:wrap;gap:.4rem 1rem;font-size:.74rem;color:var(--sub);margin:0 0 1rem}
+  .legend span{display:inline-flex;align-items:center;gap:.35rem}
+  .legend span::before{content:"";width:.8rem;height:.8rem;background:var(--navy)}
+  .legend span.l-max::before{background:var(--red)}
+  .legend span.l-off::before{background:repeating-linear-gradient(135deg,var(--line) 0 2px,transparent 2px 4px);border:1px solid var(--line)}
   .peaks{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--line)}
   @media (min-width:640px){.peaks{grid-template-columns:repeat(4,1fr);border-top:0;gap:1px;background:var(--line);border:1px solid var(--line)}}
   .peak{background:var(--sheet);padding:.6rem .8rem;border-bottom:1px solid var(--line)}
   @media (min-width:640px){.peak{border-bottom:0}}
-  .peak b{display:block;font-size:.95rem}
+  .peak b{display:flex;align-items:center;gap:.4rem;font-size:.95rem}
+  .peak b::before{content:"";width:.7rem;height:.7rem;background:var(--navy);flex:none}
+  .peak.max b::before{background:var(--red)}
   .peak span{font-size:.8rem;color:var(--sub);line-height:1.55;display:block}
   .peak.max{background:var(--red-bg)}
   .peak.max b{color:var(--red)}
@@ -331,9 +340,14 @@
     </div>
 
     <div class="year" aria-hidden="true">
-      <div></div><div class="p1"></div><div class="p1"></div><div></div><div class="p1"></div><div class="p1"></div><div></div><div class="p1"></div><div class="p1"></div><div></div><div class="p2"></div><div class="p2"></div>
+      <i style="grid-column:1"></i><i style="grid-column:4"></i><i style="grid-column:7"></i><i style="grid-column:10"></i>
+      <b style="grid-column:2/4">税還付</b>
+      <b style="grid-column:5/7">ギフト</b>
+      <b style="grid-column:8/10">新学期</b>
+      <b class="max" style="grid-column:11/13">年末商戦</b>
     </div>
-    <div class="months num" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span></div>
+    <div class="months num" id="months" aria-hidden="true"><span>1月</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12月</span></div>
+    <div class="legend"><span>需要の山</span><span class="l-max">年間最大の山</span><span class="l-off">通常期</span></div>
 
     <div class="peaks">
       <div class="peak"><b>2〜3月</b><span>Tax Return。税還付で購買意欲アップ</span></div>
@@ -572,6 +586,9 @@
   if (diff > 0) { el.innerHTML = diff + '<i>日</i>'; }
   else if (diff === 0) { el.textContent = '本日'; }
   else { el.textContent = '終了'; note.textContent = '2026年のブラックフライデーは終了しました'; }
+
+  var ms = document.querySelectorAll('#months span');
+  if (now.getFullYear() === 2026 && ms[now.getMonth()]) ms[now.getMonth()].classList.add('now');
 
   var KEY = 'ebay-q4-actions';
   var boxes = document.querySelectorAll('#act input');
