@@ -128,6 +128,7 @@
   .year > i{grid-row:1;background:repeating-linear-gradient(135deg,var(--soft) 0 4px,transparent 4px 8px);border:1px solid var(--line)}
   .year > b{grid-row:1;display:flex;align-items:center;justify-content:center;text-align:center;background:var(--navy);color:var(--sheet);font-size:.72rem;font-weight:700;line-height:1.2;padding:0 .2rem;z-index:1}
   .year > b.max{background:var(--red);font-size:.8rem;font-weight:900}
+  @media (max-width:480px){.year > b{font-size:.66rem;padding:0;letter-spacing:-.03em}.year > b.max{font-size:.7rem}}
   .months{display:grid;grid-template-columns:repeat(12,1fr);gap:3px;font-size:.72rem;color:var(--muted);text-align:center;margin-bottom:.6rem}
   .months span.now{color:var(--ink);font-weight:700;position:relative}
   .months span.now::after{content:"今";display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-size:.62rem;background:var(--ink);color:var(--sheet);width:1.3rem;margin:.1rem auto 0;line-height:1.3rem;border-radius:50%}
